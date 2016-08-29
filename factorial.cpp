@@ -8,6 +8,7 @@ int factorial(int n){
 		factorial(n);
 	} 
     if(n!=1){
+	cout << "Please wait....."
 	return(n * factorial(n-1));
     }
     else return 1;
