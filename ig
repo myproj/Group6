@@ -1,2 +1,1 @@
-*.[oa]
-*~
+jlkdfsjlkjdfs
