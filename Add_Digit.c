@@ -10,7 +10,15 @@ int main()
     //Loop for finding sum of digits
    while(n != 0)
    {
-      remainder = n % 10;
+   	if(n<0)
+   	{
+   		if(n/10 < 0)
+   			remainder = -(n % 10);
+   		else
+   			remainder = n % 10;
+   	}
+   	else
+      	remainder = n % 10;
 	  printf("The Remainder is %d\n", remainder);
       sum = sum + remainder;
 	  printf("The Sum is %d\n", sum);
