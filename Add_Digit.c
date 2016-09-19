@@ -4,24 +4,31 @@ using namespace std;
 
 int main()
 {
-	//Initialisation of variables.
+	//Variable initiation
    int n, sum = 0, remainder;
- 	//Input from user.
-   cout<<"Enter an integer\n";
-   cin>>n;
-
-   //Loop to find sum of all digits.
+ 
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+    //Loop for finding sum of digits
    while(n != 0)
    {
-      remainder = n % 10;
-	  cout<<"The Remainder is "<<remainder<<"\n";
+   	if(n<0)
+   	{
+   		if(n/10 < 0)
+   			remainder = -(n % 10);
+   		else
+   			remainder = n % 10;
+   	}
+   	else
+      	remainder = n % 10;
+	  printf("The Remainder is %d\n", remainder);
       sum = sum + remainder;
       cout<<"The Sum is "<<sum<<"\n";
       n = n / 10;
 	  cout<<"The n is "<<n<<"\n";
    }
-
-   //Display output to user.
-	cout<<"Sum of digits of entered number = "<<sum<<"\n";
-    return 0;
+ //printing sum f digits
+   printf("Sum of digits of entered number = %d\n",sum);
+ 
+   return 0;
 }
